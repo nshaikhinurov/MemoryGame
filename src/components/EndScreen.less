@@ -1,0 +1,47 @@
+@import '../styles/fonts.less';
+
+.end-screen {
+  font-family: 'Roboto', sans-serif;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 15vh;
+
+  .img {
+    width: 50vw;
+    height: 42vh;
+    max-width: 1485px;
+    max-height: 638px;
+    background: url('../img/end.png') center no-repeat;
+    background-size: contain;
+  }
+
+  .header {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    margin: 0;
+    padding-bottom: 1em;
+    letter-spacing: 2px;
+  }
+
+  .button {
+    border: none;
+    border-radius: 0.2em;
+    background-color: #ddd;
+    color: #207935;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1em;
+    padding: 0.7em 1.2em;
+    cursor: pointer;
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}

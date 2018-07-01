@@ -1,0 +1,81 @@
+@import '../styles/fonts.less';
+
+@width: max(120px,100px);
+@radius: 0.05*@width;
+@height: 1.4*@width;
+@red: #ba0c2f; // Pantone 200 color
+@black: #000;
+@gray: #545454;
+@padding: 0.066*@width;
+
+.ReactCardFlip {
+  height: @height;
+  width: @width;
+}
+.card {
+  height: @height;
+  width: @width;
+  border-radius: @radius;
+  padding: @padding;
+  background-color: white;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  user-select: none;
+  position: relative;
+  &.invisible {
+    visibility: hidden;
+  }
+  &.face-down {
+    background: linear-gradient(to bottom, #303030, #202020);
+    align-items: center;
+    .dice {
+      width: 45%;
+      height: 100%;
+      background: url('../img/dice.svg') center no-repeat;
+      @stickWidth:@width*10 /360;
+      @stickHeight:@height*62 /504;
+      &:before,
+      &:after {
+        position: absolute;
+        background-color: @gray;
+        border-radius: @stickWidth;
+        width: @stickWidth;
+        height: @stickHeight;
+        top: @height*82/504;
+        left: 50%-@stickWidth/2;
+        content: '';
+      }
+      &:after {
+        top: auto;
+        bottom: @height*82/504;
+      }
+    }
+  }
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+    content: '';
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.1)
+    );
+  }
+}
+
+.shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.react-card-flip {
+  width: @width;
+  height: @height;
+}

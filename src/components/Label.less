@@ -1,0 +1,55 @@
+@width: max(120px,100px);
+@radius: 0.05*@width;
+@height: 1.4*@width;
+@red: #ba0c2f; // Pantone 200 color
+@black: #000;
+@gray: #545454;
+@padding: 0.066*@width;
+
+.label {
+  font-family: 'Verlag Bold';
+  font-size: 0.125*@width;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  &.label-inverted {
+    transform: rotate(180deg);
+    align-self: flex-end;
+  }
+
+  .rank {
+    line-height: 0.72em;
+    margin-bottom: @padding;
+    &.red {
+      color: @red;
+    }
+    &.black {
+      color: @black;
+    }
+    &.isNumeric {
+      // digits are displayed smaller in Verlag font by default
+      font-size: 1.21em;
+    }
+  }
+
+  .shape {
+    height: 0.72em;
+    width: 0.72em;
+
+    &.heart {
+      background: url('../img/heart.svg') top center no-repeat;
+    }
+    &.club {
+      background: url('../img/club.svg') top center no-repeat;
+    }
+    &.diamond {
+      background: url('../img/diamond.svg') top center no-repeat;
+    }
+    &.spade {
+      background: url('../img/spade.svg') top center no-repeat;
+    }
+  }
+}
