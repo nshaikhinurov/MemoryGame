@@ -2,6 +2,10 @@
 
 Браузерная карточная игра "Memory". Тестовое задание на стажировку 2017-2018 для направления front-end разработки в компании СКБ Контур.
 
+## Mockup
+
+![](https://github.com/nshaikhinurov/MemoryGame/blob/master/src/img/mockup.jpg "MockUp")
+
 ## Подготовка
 
 Разработка велась с использованием React, Webpack, Babel и др. Подробнее в файле package.json
